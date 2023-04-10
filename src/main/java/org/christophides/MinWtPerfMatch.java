@@ -12,18 +12,8 @@
             Set<Integer> vertWithOddEdges= findVerticesWithOddDegree(mst,distanceMatrix);
             this.distanceMatrix=distanceMatrix;
 
-            /*System.out.println("Vertices with Odd Degree:");
-            for (int vertex : vertWithOddEdges) {
-                System.out.println(vertex);
-            }*/
-
             List<Edge> perfMatch=findMinimumWeightPerfectMatching(vertWithOddEdges);
-            System.out.println("Minimum Weight Perfect Matching Edges:");//
-            for (Edge edge : perfMatch) {
-                //System.out.println(edge.getSrc() + " - " + edge.getDest());
-                //totDistance += edge.getWeight();
-            }
-            //System.out.println("Total distance covered: " + totDistance);
+            System.out.println("Minimum Weight Perfect Matching Edges:");
 
             return perfMatch;
         }
